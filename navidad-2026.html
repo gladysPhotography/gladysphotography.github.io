@@ -85,6 +85,9 @@ section{padding:78px 0}
 h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(28px,4.4vw,42px);line-height:1.16;text-align:center;margin-bottom:16px}
 h2 .it{font-style:italic}
 .sub{text-align:center;font-size:16px;color:#4a4238;max-width:58ch;margin:0 auto 46px}
+.gal25{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.gal25 img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+@media(max-width:720px){.gal25{grid-template-columns:repeat(2,1fr)}}
 h3{font-family:'Playfair Display',serif;font-weight:500;font-size:21px;margin-bottom:10px}
 
 /* ---------- SETS ---------- */
@@ -272,25 +275,25 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       <div class="duo trio">
         <div class="slot">
           <!-- FOTO 1 · copia aquí:  Somos_gladysDueñas_lucia-2.jpg  →  renómbrala  set-nochebuena.jpg
-               Mientras no exista esa foto, cae automáticamente al mood mood-verde-preview.jpg (telón de terciopelo verde, sin personas) -->
-          <img src="set-nochebuena.jpg" alt="Set Nochebuena, verde bosque y dorado" onerror="this.onerror=function(){this.outerHTML='&lt;div class=\'ph ph-1\'&gt;&lt;div class=\'mk\'&gt;Falta la foto&lt;br&gt;set-nochebuena.jpg&lt;/div&gt;&lt;/div&gt;'};this.src='mood-verde-preview.jpg'">
+               Mientras no exista esa foto, cae automáticamente al mood mood-rojo-preview.jpg (telón real de terciopelo rojo, con estrellas y pedestal, sin personas) -->
+          <img src="set-nochebuena.jpg" alt="Set Navidad Editorial, terciopelo rojo y dorado" onerror="this.onerror=function(){this.outerHTML='&lt;div class=\'ph ph-1\'&gt;&lt;div class=\'mk\'&gt;Falta la foto&lt;br&gt;set-nochebuena.jpg&lt;/div&gt;&lt;/div&gt;'};this.src='mood-rojo-preview.jpg'">
         </div>
         <div class="slot">
-          <!-- Prop real — las estrellas de luz que Gladys ya compró ($34), foto suya, no es referencia externa -->
-          <img src="real-verde-estrellas.jpg" alt="Prop real: estrellas de luz compradas para el set editorial" onerror="this.outerHTML='&lt;div class=\'ph ph-1\'&gt;&lt;div class=\'mk\'&gt;Prop real&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
+          <!-- Prop real — cascanueces de terciopelo que Gladys ya compró, foto suya del set real, no es referencia externa -->
+          <img src="real-rojo-cascanueces.jpg" alt="Prop real: cascanueces de terciopelo comprado para el set editorial" onerror="this.outerHTML='&lt;div class=\'ph ph-1\'&gt;&lt;div class=\'mk\'&gt;Prop real&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
           <span class="itag real">Prop real</span>
         </div>
         <div class="slot">
-          <!-- Espacio de inspiración — imagen generada por IA (Gemini), no es una foto real de otro estudio -->
-          <img src="insp-verde-2.jpg" alt="Inspiración: editorial verde con cajas de regalo, imagen generada" onerror="this.outerHTML='&lt;div class=\'ph ph-4\'&gt;&lt;div class=\'mk\'&gt;Inspiración&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
+          <!-- Espacio de inspiración — referencia externa enviada por Gladys, puesta a pedido explícito suyo (16/09) -->
+          <img src="insp-rojo-2.jpg" alt="Inspiración: editorial rojo con lazo gigante de terciopelo" onerror="this.outerHTML='&lt;div class=\'ph ph-4\'&gt;&lt;div class=\'mk\'&gt;Inspiración&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
           <span class="itag">Inspiración</span>
         </div>
       </div>
       <div class="bd">
         <div class="n">Set uno</div>
         <h3>Navidad Editorial</h3>
-        <p>Terciopelo verde de pared a piso, cajas de regalo apiladas, estrellas con luz y acentos en rojo. El retrato más de revista de los tres — elegante, con carácter, distinto al clásico family portrait.</p>
-        <div class="pal"><i style="background:#1E3D2F"></i><i style="background:#C9A84C"></i><i style="background:#C0392B"></i><i style="background:#B7B7B7"></i></div>
+        <p>Terciopelo rojo de pared a piso, un pedestal como protagonista, estrellas con luz y un cascanueces de terciopelo como detalle. El retrato con más glamour y drama de los tres — elegante, editorial, digno de revista.</p>
+        <div class="pal"><i style="background:#8C1D2B"></i><i style="background:#C9A84C"></i><i style="background:#241E1A"></i><i style="background:#F2D98A"></i></div>
       </div>
     </div>
     <div class="set">
@@ -348,6 +351,27 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
         <div class="pal"><i style="background:#EFEAE0"></i><i style="background:#4A7C82"></i><i style="background:#6E2332"></i><i style="background:#C9A84C"></i></div>
       </div>
     </div>
+  </div>
+</div>
+</section>
+
+<!-- ===================== GALERÍA (temporadas anteriores) ===================== -->
+<section id="galeria-2025" style="background:#fff;border-top:1px solid var(--crema-2)">
+<div class="wrap">
+  <div class="lbl">Temporadas anteriores</div>
+  <h2>Así se han vivido <span class="it">nuestras Navidades</span></h2>
+  <p class="sub">Algunas familias que ya vivieron la experiencia — así de reales se ven las fotos, sin ningún retoque de marketing.</p>
+  <div class="gal25">
+    <img src="galeria-2025-2.jpg" alt="Mamá e hija riendo junto al árbol, sesión navideña 2025">
+    <img src="galeria-2025-3.jpg" alt="Papá cargando a su hija, sesión navideña 2025">
+    <img src="galeria-2025-5.jpg" alt="Familia abrazada con luz cálida, sesión navideña 2025">
+    <img src="galeria-2025-6.jpg" alt="Papá e hija con peluche de reno, sesión navideña 2025">
+    <img src="galeria-2025-8.jpg" alt="Papá e hija en set turquesa junto a la chimenea, sesión navideña 2025">
+    <img src="galeria-2023-1.jpg" alt="Mamá e hija con look elegante, sesión navideña 2023">
+    <img src="galeria-2023-2.jpg" alt="Niña saltando de alegría con gorro navideño, sesión 2023">
+    <img src="galeria-2023-3.jpg" alt="Tres generaciones abrazadas, sesión navideña 2023">
+    <img src="galeria-2023-4.jpg" alt="Niña en trineo con los brazos abiertos, sesión navideña 2023">
+    <img src="galeria-2023-5.jpg" alt="Abuelos e hija juntos, sesión navideña 2023">
   </div>
 </div>
 </section>
