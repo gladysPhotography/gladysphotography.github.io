@@ -258,7 +258,7 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       <a href="#reservar" class="btn btn-g">Reservar mi horario</a>
       <a href="#paquetes" class="btn btn-o">Ver paquetes</a>
     </div>
-    <div class="note">Cupos limitados · Precio de preventa hasta el 7 de octubre</div>
+    <div class="note">Cupos limitados · Reserva tu fecha</div>
   </div>
 </div>
 
@@ -386,15 +386,14 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
 <div class="wrap">
   <div class="lbl">Paquetes</div>
   <h2>Elige el tuyo</h2>
-  <p class="sub">Todos incluyen la sesión, la edición profesional y tu selección acompañada el mismo día. Reserva unos 30 minutos adicionales para elegir. Precios de preventa hasta el 7 de octubre.</p>
+  <p class="sub">Todos incluyen la sesión, la edición profesional y tu selección acompañada el mismo día. Reserva unos 30 minutos adicionales para elegir.</p>
 
   <div class="paks">
     <!-- C -->
     <div class="pk">
       <div class="nm">Legado</div>
       <div class="tg">Opción C · muy pocos cupos · Solo sede Cumbayá</div>
-      <div class="pr"><b>$320</b><i>preventa</i></div>
-      <div class="before">Después $390</div>
+      <div class="pr"><b>$390</b></div>
       <ul>
         <li><b>Los 3 escenarios</b>, sin prisa</li>
         <li>Sesión de <b>60 minutos</b></li>
@@ -413,8 +412,7 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       <div class="rib">El más elegido</div>
       <div class="nm">Navidad completa</div>
       <div class="tg">Opción B · Solo sede Cumbayá</div>
-      <div class="pr"><b>$169</b><i>preventa</i></div>
-      <div class="before">Después $200</div>
+      <div class="pr"><b>$200</b></div>
       <ul>
         <li><b>Los 3 escenarios</b></li>
         <li>Sesión de <b>45 minutos</b></li>
@@ -422,7 +420,7 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
         <li><b>13 fotos</b>: digitales editadas + impresas 13 × 18 (las mismas 13, en los dos formatos)</li>
         <li>Impresión <b>20 × 30 en bastidor</b></li>
         <li><b>15 tarjetas navideñas</b> impresas, 1 diseño</li>
-        <li>Plataforma digital</li>
+        <li>Galería digital personal: donde ves, eliges, descargas y compartes <b>las fotos de tu paquete</b></li>
       </ul>
       <a href="#reservar" class="btn btn-g" onclick="pre('Navidad completa')">Reservar Navidad completa</a>
     </div>
@@ -431,25 +429,175 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
     <div class="pk">
       <div class="nm">Esencia</div>
       <div class="tg">Opción A</div>
-      <div class="pr"><b>$99</b><i>preventa</i></div>
-      <div class="before">Después $125</div>
+      <div class="pr"><b>$125</b></div>
       <ul>
         <li><b>2 escenarios</b> a tu elección</li>
         <li>Sesión de <b>30 minutos</b></li>
         <li>Hasta <b>6 personas</b></li>
         <li><b>9 fotos</b>: digitales editadas + impresas 10 × 15 (las mismas 9, en los dos formatos)</li>
-        <li>Plataforma digital</li>
+        <li>Galería digital personal: donde ves, eliges, descargas y compartes <b>las fotos de tu paquete</b></li>
       </ul>
       <a href="#reservar" class="btn btn-o" style="border-color:var(--crema-2);color:var(--verde)" onclick="pre('Esencia')">Reservar Esencia</a>
     </div>
   </div>
   <p class="pk-note">Navidad completa y Legado están disponibles solo en la sede Cumbayá, con los 3 escenarios. En la sede norte trabajamos con dos escenarios y solo la opción Esencia.</p>
+  <p class="pk-note"><b>Sobre tu galería digital:</b> es tu galería personal, el lugar donde ves, eliges, descargas y compartes las fotos de tu paquete. Si tu paquete trae 9 fotos, tu galería tiene esas 9. ¿Quieres más? Añades fotos por separado (desde $12 cada una) o la galería completa de la sesión, que tiene su propio valor.</p>
   <p class="pk-note">Persona adicional: $10 en cualquier paquete, hasta un máximo de 10 personas. Legado ya incluye hasta 10. Se reserva con el 50% del valor.</p>
 
-  <div style="margin-top:52px">
+  </div>
+</section>
+
+<!-- ===================== RESERVAR ===================== -->
+<section id="reservar" class="form-sec">
+<div class="wrap">
+  <div class="lbl">Reserva</div>
+  <h2>Aparta tu horario</h2>
+  <p class="sub">Completa tus datos y te confirmamos disponibilidad y el link de pago por WhatsApp. Tu horario se bloquea cuando se recibe el pago.</p>
+
+  <div class="narrow">
+    <form class="frm" id="f" onsubmit="return enviar(event)">
+      <div class="f2">
+        <div class="fg">
+          <label for="nom">Tu nombre completo</label>
+          <input type="text" id="nom" required placeholder="Nombre y apellido">
+        </div>
+        <div class="fg">
+          <label for="tel">WhatsApp</label>
+          <input type="tel" id="tel" required placeholder="09 9999 9999">
+        </div>
+      </div>
+
+      <div class="f2">
+        <div class="fg">
+          <label for="paq">Paquete</label>
+          <select id="paq" required>
+            <option value="">Selecciona…</option>
+            <option>Esencia · $125</option>
+            <option>Navidad completa · $200</option>
+            <option>Legado · $390</option>
+            <option>Aún no lo decido</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="sede">Sede</label>
+          <select id="sede" required>
+            <option value="">Selecciona…</option>
+            <option>Cumbayá</option>
+            <option>Sede norte</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="f2">
+        <div class="fg">
+          <label for="fec">Fecha que prefieres</label>
+          <select id="fec" required>
+            <option value="">Selecciona…</option>
+            <optgroup label="Cumbayá">
+              <option>Sábado 7 de noviembre</option>
+              <option>Domingo 8 de noviembre</option>
+              <option>Sábado 5 de diciembre</option>
+              <option>Domingo 6 de diciembre</option>
+              <option>Sábado 12 de diciembre</option>
+              <option>Domingo 13 de diciembre</option>
+            </optgroup>
+            <optgroup label="Sede norte">
+              <option>Sábado 31 de octubre</option>
+              <option>Domingo 1 de noviembre</option>
+              <option>Sábado 7 de noviembre</option>
+              <option>Domingo 8 de noviembre</option>
+              <option>Sábado 14 de noviembre</option>
+              <option>Domingo 15 de noviembre</option>
+              <option>Sábado 21 de noviembre</option>
+              <option>Domingo 22 de noviembre</option>
+              <option>Sábado 28 de noviembre</option>
+              <option>Domingo 29 de noviembre</option>
+              <option>Sábado 19 de diciembre</option>
+            </optgroup>
+            <option>Quiero que me avises si abren más fechas</option>
+          </select>
+          <p style="font-size:12px;color:rgba(250,247,240,.75);margin-top:6px">¿Fecha específica o entre semana? Escríbenos por <a href="#" class="wa-fecha" target="_blank" style="color:var(--dorado-cl);text-decoration:underline">WhatsApp</a>.</p>
+        </div>
+        <div class="fg">
+          <label for="hor">Horario que prefieres</label>
+          <select id="hor" required>
+            <option value="">Selecciona…</option>
+            <option>Mañana · 10:00 a 12:00</option>
+            <option>Mediodía · 12:00 a 14:00</option>
+            <option>Tarde · 15:00 a 17:00</option>
+            <option>Cualquiera</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="f2">
+        <div class="fg">
+          <label for="per">Cuántas personas</label>
+          <select id="per" required>
+            <option value="">Selecciona…</option>
+            <option>2 personas</option><option>3 personas</option>
+            <option>4 personas</option><option>5 personas</option>
+            <option>6 personas</option><option>7 personas</option>
+            <option>8 personas</option><option>9 personas</option>
+            <option>10 personas</option>
+          </select>
+          <p style="font-size:12px;color:var(--gris);margin-top:6px">Si superan el cupo de tu paquete, cada persona adicional cuesta $10.</p>
+        </div>
+        <div class="fg">
+          <label for="ref">¿Cómo nos conociste?</label>
+          <select id="ref">
+            <option value="">Opcional</option>
+            <option>Ya fui clienta antes</option>
+            <option>Me recomendó una amiga</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>El colegio de mi hijo</option>
+            <option>Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="fg">
+        <label>Extras (opcional)</label>
+        <label style="display:flex;align-items:center;gap:9px;font-weight:400;font-size:14.5px;color:rgba(250,247,240,.9);margin-top:6px;cursor:pointer">
+          <input type="checkbox" id="ext30" style="width:16px;height:16px;accent-color:var(--dorado)">
+          Quiero añadir 30 minutos extra a mi sesión (+$45)
+        </label>
+        <label style="display:flex;align-items:center;gap:9px;font-weight:400;font-size:14.5px;color:rgba(250,247,240,.9);margin-top:10px;cursor:pointer">
+          <input type="checkbox" id="pet10" style="width:16px;height:16px;accent-color:var(--dorado)">
+          Vendrá una mascota (+$10)
+        </label>
+        <label for="xp" style="display:block;font-weight:400;font-size:14.5px;color:rgba(250,247,240,.9);margin-top:14px;text-transform:none;letter-spacing:0">Personas adicionales a las que incluye mi paquete (+$10 cada una)</label>
+        <select id="xp" style="margin-top:6px">
+          <option value="0">Ninguna</option>
+          <option value="1">1 persona adicional (+$10)</option>
+          <option value="2">2 personas adicionales (+$20)</option>
+          <option value="3">3 personas adicionales (+$30)</option>
+          <option value="4">4 personas adicionales (+$40)</option>
+          <option value="5">5 personas adicionales (+$50)</option>
+        </select>
+      </div>
+
+      <div class="fg">
+        <label for="obs">¿Algo que debamos saber?</label>
+        <textarea id="obs" rows="3" placeholder="Bebés, mascotas, alguna preferencia…"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-g">Enviar y continuar por WhatsApp</button>
+      <div id="msg"></div>
+      <p class="fine">Al enviar se abre WhatsApp con tus datos listos. Te confirmamos disponibilidad y el link de pago.<br>El horario se bloquea únicamente cuando se recibe el pago.</p>
+    </form>
+  </div>
+</div>
+</section>
+
+<!-- ===================== EXTRAS ===================== -->
+<section id="extras" style="background:#fff;border-top:1px solid var(--crema-2);border-bottom:1px solid var(--crema-2)">
+<div class="wrap">
+<div style="margin-top:52px">
     <div class="lbl">Ese mismo día</div>
     <h2 style="font-size:clamp(24px,3.4vw,32px)">Si quieres <span class="it">llevarte más</span></h2>
-    <p class="sub">Al terminar tu sesión ves todas las fotos y podrás añadir lo que quieras. Estos son los valores, para que llegues sabiendo.</p>
+    <p class="sub">Al terminar tu sesión ves todas las fotos y puedes añadir las que quieras. Tu paquete incluye solo la cantidad de fotos indicada; cada foto adicional tiene un valor. Estos son los valores, para que llegues sabiendo.</p>
     <div class="tbl narrow">
       <table>
         <thead><tr><th>Adicional</th><th class="n">Valor</th></tr></thead>
@@ -540,6 +688,8 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
     </div>
   </div>
 
+  <p style="text-align:center;font-size:15.5px;color:#4a4238;margin-top:34px">¿Buscas una fecha específica o entre semana? <a href="#" class="wa-fecha" target="_blank" style="color:var(--verde);font-weight:600;text-decoration:underline">Escríbenos por WhatsApp</a>.</p>
+
   <div style="margin-top:56px">
     <div class="lbl">Cómo funciona</div>
     <h2 style="font-size:clamp(24px,3.4vw,32px)">Cuatro pasos</h2>
@@ -554,140 +704,6 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
 </div>
 </section>
 
-<!-- ===================== RESERVAR ===================== -->
-<section id="reservar" class="form-sec">
-<div class="wrap">
-  <div class="lbl">Reserva</div>
-  <h2>Aparta tu horario</h2>
-  <p class="sub">Completa tus datos y te confirmamos disponibilidad y el link de pago por WhatsApp. Tu horario se bloquea cuando se recibe el pago.</p>
-
-  <div class="narrow">
-    <form class="frm" id="f" onsubmit="return enviar(event)">
-      <div class="f2">
-        <div class="fg">
-          <label for="nom">Tu nombre completo</label>
-          <input type="text" id="nom" required placeholder="Nombre y apellido">
-        </div>
-        <div class="fg">
-          <label for="tel">WhatsApp</label>
-          <input type="tel" id="tel" required placeholder="09 9999 9999">
-        </div>
-      </div>
-
-      <div class="f2">
-        <div class="fg">
-          <label for="paq">Paquete</label>
-          <select id="paq" required>
-            <option value="">Selecciona…</option>
-            <option>Esencia · $99 preventa</option>
-            <option>Navidad completa · $169 preventa</option>
-            <option>Legado · $320 preventa</option>
-            <option>Aún no lo decido</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label for="sede">Sede</label>
-          <select id="sede" required>
-            <option value="">Selecciona…</option>
-            <option>Cumbayá</option>
-            <option>Sede norte</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="f2">
-        <div class="fg">
-          <label for="fec">Fecha que prefieres</label>
-          <select id="fec" required>
-            <option value="">Selecciona…</option>
-            <optgroup label="Cumbayá">
-              <option>Sábado 7 de noviembre</option>
-              <option>Domingo 8 de noviembre</option>
-              <option>Sábado 5 de diciembre</option>
-              <option>Domingo 6 de diciembre</option>
-              <option>Sábado 12 de diciembre</option>
-              <option>Domingo 13 de diciembre</option>
-            </optgroup>
-            <optgroup label="Sede norte">
-              <option>Sábado 31 de octubre</option>
-              <option>Domingo 1 de noviembre</option>
-              <option>Sábado 7 de noviembre</option>
-              <option>Domingo 8 de noviembre</option>
-              <option>Sábado 14 de noviembre</option>
-              <option>Domingo 15 de noviembre</option>
-              <option>Sábado 21 de noviembre</option>
-              <option>Domingo 22 de noviembre</option>
-              <option>Sábado 28 de noviembre</option>
-              <option>Domingo 29 de noviembre</option>
-              <option>Sábado 19 de diciembre</option>
-            </optgroup>
-            <option>Quiero que me avises si abren más fechas</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label for="hor">Horario que prefieres</label>
-          <select id="hor" required>
-            <option value="">Selecciona…</option>
-            <option>Mañana · 10:00 a 12:00</option>
-            <option>Mediodía · 12:00 a 14:00</option>
-            <option>Tarde · 15:00 a 17:00</option>
-            <option>Cualquiera</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="f2">
-        <div class="fg">
-          <label for="per">Cuántas personas</label>
-          <select id="per" required>
-            <option value="">Selecciona…</option>
-            <option>2 personas</option><option>3 personas</option>
-            <option>4 personas</option><option>5 personas</option>
-            <option>6 personas</option><option>7 personas</option>
-            <option>8 personas</option><option>9 personas</option>
-            <option>10 personas</option>
-          </select>
-          <p style="font-size:12px;color:var(--gris);margin-top:6px">Si superan el cupo de tu paquete, cada persona adicional cuesta $10.</p>
-        </div>
-        <div class="fg">
-          <label for="ref">¿Cómo nos conociste?</label>
-          <select id="ref">
-            <option value="">Opcional</option>
-            <option>Ya fui clienta antes</option>
-            <option>Me recomendó una amiga</option>
-            <option>Instagram</option>
-            <option>Facebook</option>
-            <option>El colegio de mi hijo</option>
-            <option>Otro</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="fg">
-        <label>Extras (opcional)</label>
-        <label style="display:flex;align-items:center;gap:9px;font-weight:400;font-size:14.5px;color:rgba(250,247,240,.9);margin-top:6px;cursor:pointer">
-          <input type="checkbox" id="ext30" style="width:16px;height:16px;accent-color:var(--dorado)">
-          Quiero añadir 30 minutos extra a mi sesión (+$45)
-        </label>
-        <label style="display:flex;align-items:center;gap:9px;font-weight:400;font-size:14.5px;color:rgba(250,247,240,.9);margin-top:10px;cursor:pointer">
-          <input type="checkbox" id="pet10" style="width:16px;height:16px;accent-color:var(--dorado)">
-          Vendrá una mascota (+$10)
-        </label>
-      </div>
-
-      <div class="fg">
-        <label for="obs">¿Algo que debamos saber?</label>
-        <textarea id="obs" rows="3" placeholder="Bebés, mascotas, alguna preferencia…"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-g">Enviar y continuar por WhatsApp</button>
-      <div id="msg"></div>
-      <p class="fine">Al enviar se abre WhatsApp con tus datos listos. Te confirmamos disponibilidad y el link de pago.<br>El horario se bloquea únicamente cuando se recibe el pago.</p>
-    </form>
-  </div>
-</div>
-</section>
-
 <!-- ===================== POLITICAS ===================== -->
 <section>
 <div class="wrap">
@@ -696,6 +712,7 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
   <p class="sub">Trabajamos con horarios seguidos y espacios reservados. Estas normas existen para que la sesión de todas las familias salga bien.</p>
 
   <div class="pol narrow">
+    <div class="it2"><div class="k">Fotos incluidas</div><div class="v">Cada paquete incluye un <b>número definido de fotos editadas</b>, el que indica su descripción (por ejemplo, 9 en Esencia). <b>Ningún paquete incluye la totalidad de las fotos de la sesión ni fotos sin editar.</b> Tu galería digital es personal: es el lugar donde ves, eliges, descargas y compartes las fotos de tu paquete. Si quieres más, puedes añadir fotos por separado o la galería completa, según los valores de la sección de extras.</div></div>
     <div class="it2"><div class="k">Reserva</div><div class="v">La reserva se confirma con el <b>50% del valor</b>. El otro 50% se paga el día de tu sesión, antes de comenzar. Sin el pago de reserva, el horario no queda bloqueado. Cada horario se reserva de forma exclusiva para tu familia: nunca compartes tu turno ni tu fotógrafo con otra.<br><br>Esto es lo normal, en todos los paquetes. Solo en días de mucha demanda sumamos un segundo equipo trabajando en otro set — la excepción, no la regla — y aun así cada quien está en su propio espacio. <b>Con Legado esto no pasa nunca:</b> tu turno se reserva solo para ustedes, sin excepción.</div></div>
     <div class="it2"><div class="k">Puntualidad</div><div class="v">Llega <b>10 minutos antes</b> de tu turno. Los turnos son seguidos y si llegas tarde no podremos darte tiempo extra: perderás minutos de tu sesión.<br><br>Si llegas mucho antes (nos pasa seguido, gente que llega hasta 20 minutos antes): los turnos están separados por familia, así que no podemos adelantarte sin más — puede haber otra sesión en curso justo antes de la tuya. Si quieres llegar antes de tu horario, avísanos con anticipación y confirmamos si es posible. Si ya hay un turno agendado en ese espacio, no podremos adelantar tu sesión.</div></div>
     <div class="it2"><div class="k">Personas extra</div><div class="v">Contamos <b>personas, no edades</b>: de 0 a 100 años, todos cuentan igual para el cupo del paquete — un bebé en brazos ocupa un lugar como cualquier otro.<br><br>Los sets se preparan según el número de personas de la reserva. Si viene alguien más, <b>avísanos con un día de anticipación</b>. Cada persona adicional cuesta <b>$10</b>, en cualquier paquete, hasta un máximo de 10 personas. Legado ya incluye hasta 10, sin cargo extra.</div></div>
@@ -753,6 +770,7 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
     <details><summary>¿Puedo llevar a mi mascota?</summary><div class="ans">Sí, encantados. Avísanos al reservar para preparar el set. Las mascotas cuentan como una persona adicional.</div></details>
     <details><summary>¿Y si mi bebé llora o no coopera?</summary><div class="ans">Es completamente normal y nos pasa en casi todas las sesiones. Tenemos experiencia con niños pequeños y nunca los forzamos: jugamos, esperamos y las mejores fotos siempre aparecen. Lo único que ayuda de verdad es que la hora no choque con su siesta ni su comida.</div></details>
     <details><summary>¿Puedo elegir en qué escenarios quiero fotos?</summary><div class="ans">Sí. Con la opción Esencia eliges 2 de los 3 escenarios. Con Navidad completa y Legado tienes los tres — estos dos paquetes están disponibles solo en la sede Cumbayá, donde están montados los 3 escenarios. En la sede norte trabajamos con dos escenarios y solo la opción Esencia.</div></details>
+    <details><summary>¿La galería digital incluye todas las fotos de la sesión?</summary><div class="ans">Tu galería digital es personal: es el lugar donde ves, eliges, descargas y compartes las fotos de tu paquete. No contiene todas las fotos de la sesión, sino la cantidad que incluye tu paquete. Por ejemplo, con 9 fotos, tu galería tiene esas 9. Si quieres más, añades una foto por $12 o un paquete de 10 por $108. La galería completa de la sesión tiene su propio valor ($300) y la decides el mismo día, al elegir tus fotos.</div></details>
     <details><summary>Las fotos digitales y las impresas, ¿son distintas o las mismas?</summary><div class="ans">Son las mismas. Si tu paquete incluye 9 o 13 fotos, ese es el número total que eliges — y esas mismas fotos te las entregamos en los dos formatos: digital editada y ya impresa. No se duplica el número: no son 9 digitales más 9 impresas distintas, son 9 fotos, en digital y en papel.</div></details>
     <details><summary>¿Las fotos llegan antes de Navidad?</summary><div class="ans">Si tu sesión es en noviembre, sí: tus impresiones y tarjetas llegan la primera semana de diciembre. Las sesiones de diciembre se entregan según fecha, y te confirmamos el plazo al reservar.</div></details>
     <details><summary>¿Puedo pagar en partes?</summary><div class="ans">Sí: la reserva se confirma con el 50% del valor, porque cada horario se bloquea de forma exclusiva. El otro 50% se paga el día de tu sesión, antes de comenzar.</div></details>
@@ -797,6 +815,7 @@ const WHATSAPP = "593984454589";
 document.getElementById('wafloat').href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Gladys, quiero información sobre las minisesiones de Navidad 2026 🌲");
 document.getElementById('wa2').href = document.getElementById('wafloat').href;
 document.getElementById('wa2').target = "_blank";
+document.querySelectorAll('.wa-fecha').forEach(function(x){x.href="https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Gladys, quisiera consultar por una fecha específica o entre semana para la minisesión de Navidad 🎄");});
 
 function pre(p){
   const s = document.getElementById('paq');
@@ -819,6 +838,7 @@ function enviar(e){
     "• Personas: " + g('per') +
     (document.getElementById('ext30').checked ? "\n• Tiempo extra: +30 min (+$45)" : "") +
     (document.getElementById('pet10').checked ? "\n• Mascota: sí (+$10)" : "") +
+    (parseInt(g('xp')||'0') > 0 ? "\n• Personas adicionales: " + g('xp') + " (+$" + (parseInt(g('xp'))*10) + ")" : "") +
     (g('ref') ? "\n• Los conocí por: " + g('ref') : "") +
     (g('obs') ? "\n• Nota: " + g('obs') : "") +
     "\n\nQuedo atenta a la disponibilidad y al link de pago.";
