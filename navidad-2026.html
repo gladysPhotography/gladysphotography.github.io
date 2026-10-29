@@ -297,32 +297,25 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       </div>
     </div>
     <div class="set">
-      <div class="duo">
+      <div class="duo trio">
         <div class="slot">
-          <!-- FOTO 2 · copia aquí:  Somos_NAVIDAD_ZAMBRANO-2.jpg  →  renómbrala  set-invierno.jpg
-               Mientras no exista esa foto, cae automáticamente al mood mood-invierno-preview.jpg (el diseño del telón que se va a imprimir) -->
-          <img src="set-invierno.jpg" alt="Set Laguna de invierno, bosque nevado" onerror="this.onerror=function(){this.outerHTML='&lt;div class=\'ph ph-2\'&gt;&lt;div class=\'mk\'&gt;Falta la foto&lt;br&gt;set-invierno.jpg&lt;/div&gt;&lt;/div&gt;'};this.src='mood-invierno-preview.jpg'">
+          <img src="set-invierno.jpg" alt="Set Laguna de invierno: árboles escarchados, abedules con luces, trineo, caballito y reno blancos">
+          <span class="itag">Render del set</span>
         </div>
         <div class="slot">
-          <!-- Espacio de inspiración — columpio entre árboles, sin personas -->
-          <img src="insp-invierno-2.jpg" alt="Inspiración: columpio entre árboles nevados con luces" onerror="this.outerHTML='&lt;div class=\'ph ph-2\'&gt;&lt;div class=\'mk\'&gt;Inspiración&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
-          <span class="itag">Inspiración</span>
+          <img src="ilus-invierno-1.jpg" alt="Ilustración: familia en el set Laguna de invierno, con el trineo y el caballito">
+          <span class="itag">Render</span>
         </div>
         <div class="slot">
-          <!-- Espacio de inspiración — arco de ramas escarchadas con trineo, confirma que habrá trineo en el set -->
-          <img src="insp-invierno-3.jpg" alt="Inspiración: arco de ramas escarchadas con trineo pastel y mantas" onerror="this.outerHTML='&lt;div class=\'ph ph-2\'&gt;&lt;div class=\'mk\'&gt;Inspiración&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
-          <span class="itag">Inspiración</span>
-        </div>
-        <div class="slot">
-          <!-- Espacio de inspiración — fondo pintado real, madre con bebé -->
-          <img src="insp-invierno-4.jpg" alt="Inspiración: fondo pintado del bosque nevado con madre y bebé" onerror="this.outerHTML='&lt;div class=\'ph ph-2\'&gt;&lt;div class=\'mk\'&gt;Inspiración&lt;br&gt;muy pronto&lt;/div&gt;&lt;/div&gt;'">
-          <span class="itag">Inspiración</span>
+          <img src="ilus-invierno-2.jpg" alt="Ilustración: familia con sus bebés en el set Laguna de invierno">
+          <span class="itag">Render</span>
         </div>
       </div>
       <div class="bd">
         <div class="n">Set dos</div>
         <h3>Laguna de invierno</h3>
-        <p>Un bosque nevado con luces cálidas, trineo y nieve hasta los pies. Es el set donde los niños se sueltan y aparecen las mejores risas.</p>
+        <p>Un bosque nevado con árboles escarchados, abedules con luces cálidas, trineo, caballito y reno blancos, y nieve hasta los pies. Es el set donde los niños se sueltan y aparecen las mejores risas.</p>
+        <p style="font-size:12px;color:var(--gris);margin-top:8px">Imágenes en render, como referencia. Los elementos del set —trineo, caballito, reno, árboles y luces— son reales y los armamos nosotros.</p>
         <div class="pal"><i style="background:#FFFFFF"></i><i style="background:#D8DEE2"></i><i style="background:#9DB4C0"></i><i style="background:#F2D98A"></i></div>
       </div>
     </div>
@@ -491,10 +484,9 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       <div class="f2">
         <div class="fg">
           <label for="fec">Fecha que prefieres</label>
-          <select id="fec" required>
+          <select id="fec" required onchange="var o=document.getElementById('fec2');var v=this.value==='otra';o.style.display=v?'block':'none';o.required=v;if(!v)o.value='';">
             <option value="">Selecciona…</option>
             <optgroup label="Cumbayá">
-              <option>Sábado 7 de noviembre</option>
               <option>Domingo 8 de noviembre</option>
               <option>Sábado 5 de diciembre</option>
               <option>Domingo 6 de diciembre</option>
@@ -504,8 +496,6 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
             <optgroup label="Sede norte">
               <option>Sábado 31 de octubre</option>
               <option>Domingo 1 de noviembre</option>
-              <option>Sábado 7 de noviembre</option>
-              <option>Domingo 8 de noviembre</option>
               <option>Sábado 14 de noviembre</option>
               <option>Domingo 15 de noviembre</option>
               <option>Sábado 21 de noviembre</option>
@@ -514,8 +504,10 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
               <option>Domingo 29 de noviembre</option>
               <option>Sábado 19 de diciembre</option>
             </optgroup>
+            <option value="otra">Otra fecha (la escribo abajo)</option>
             <option>Quiero que me avises si abren más fechas</option>
           </select>
+          <input type="text" id="fec2" placeholder="Escribe la fecha que deseas (ej. sábado 12 de diciembre, o entre semana)" style="display:none;margin-top:8px">
           <p style="font-size:12px;color:rgba(250,247,240,.75);margin-top:6px">¿Fecha específica o entre semana? Escríbenos por <a href="#" class="wa-fecha" target="_blank" style="color:var(--dorado-cl);text-decoration:underline">WhatsApp</a>.</p>
         </div>
         <div class="fg">
@@ -656,7 +648,7 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       <div class="ad">A pocos minutos de Nayón, Tumbaco y los valles · Estacionamiento disponible</div>
       <p style="font-size:14.5px;color:#4a4238;margin-bottom:14px">Los 3 escenarios · Sala privada para tu selección · Las tres opciones disponibles</p>
       <div class="fchs">
-        <div class="fch"><b>Sáb</b>7 nov</div>
+        <div class="fch" style="opacity:.55;background:#f1ede3"><b>Sáb</b><s>7 nov</s> <span style="font-size:10px;letter-spacing:.1em;color:#8C1D2B;font-weight:600">AGOTADO</span></div>
         <div class="fch"><b>Dom</b>8 nov</div>
         <div class="fch"><b>Sáb</b>5 dic</div>
         <div class="fch"><b>Dom</b>6 dic</div>
@@ -674,8 +666,6 @@ footer .cr{font-size:11.5px;color:rgba(250,247,240,.32);margin-top:26px;letter-s
       <div class="fchs">
         <div class="fch"><b>Sáb</b>31 oct</div>
         <div class="fch"><b>Dom</b>1 nov</div>
-        <div class="fch"><b>Sáb</b>7 nov</div>
-        <div class="fch"><b>Dom</b>8 nov</div>
         <div class="fch"><b>Sáb</b>14 nov</div>
         <div class="fch"><b>Dom</b>15 nov</div>
         <div class="fch"><b>Sáb</b>21 nov</div>
@@ -833,7 +823,7 @@ function enviar(e){
     "• WhatsApp: " + g('tel') + "\n" +
     "• Paquete: " + g('paq') + "\n" +
     "• Sede: " + g('sede') + "\n" +
-    "• Fecha: " + g('fec') + "\n" +
+    "• Fecha: " + (g('fec')==='otra' ? "Otra fecha: " + g('fec2') : g('fec')) + "\n" +
     "• Horario: " + g('hor') + "\n" +
     "• Personas: " + g('per') +
     (document.getElementById('ext30').checked ? "\n• Tiempo extra: +30 min (+$45)" : "") +
